@@ -7,10 +7,13 @@ class Vehicle
         @windup_text = ""
         @level = 0
     end
-    def refuel(litres)
+    def refuel(litres, capacity)
         @level += litres
-        puts "#{litres} Litres of fuel"
-        
+        puts "#{litres} Litres of fuel added"
+        if @level >= capacity
+            @level = capacity
+            puts "Your #{@model} is full! #{litres}"
+        end
     end
     def wheelie(w_text)
         puts w_text
@@ -22,19 +25,27 @@ class Vehicle
         puts "You have #{level} litres in your tank"     
     end
 end
+
 class Car < Vehicle
-end
-class Motorbike < Vehicle
-    def refuel
-        super == 15
-        puts "Bike is already full"
+    def refuel(litres)
+        super(litres, 50)
     end
 end
+
+class Motorbike < Vehicle
+    def refuel(litres)  
+        super(litres, 15)
+    end
+end
+
 civic = Car.new("Honda", "Civic")
 low_rider = Motorbike.new("Harley", "Davidson")
-civic.refuel(10)
+civic.refuel(60)
 civic.fuel_level
 civic.wind_up_windows("Winding up windows")
 civic.wheelie("Wheelie!")
+low_rider.refuel(3)
+low_rider.refuel(3)
+low_rider.refuel(9)
 low_rider.refuel(10)
 low_rider.fuel_level

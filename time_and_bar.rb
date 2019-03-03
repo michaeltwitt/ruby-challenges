@@ -64,19 +64,22 @@ class Order
         puts "We have made $#{@profit_b + @profit_c + @profit_w}"
     end
 end
+drinking = true
 me = Order.new(6,3,2)
-print me.display_order
-puts "What would you like to order?\nWe only have cocktails, water and beer available because reasons."
-cust_order = gets.chomp.capitalize
-case cust_order
-when "Cocktail", "Cocktails", "C"
-    me.cocktail
-when "Beer", "Beers", "B"
-    me.beer
-when "Water", "Waters", "W"
-    me.water
-when ""
+while drinking == true
+    print me.display_order
+    puts "What would you like to order?\nWe only have cocktails, water and beer available because reasons."
+    cust_order = gets.chomp.capitalize
+    case cust_order
+    when "Cocktail", "Cocktails", "C"
+        me.cocktail
+    when "Beer", "Beers", "B"
+        me.beer
+    when "Water", "Waters", "W"
+        me.water
+    else 
+        drinking = false  
+    end
 end
-
 print me.display_order
 print me.profit
