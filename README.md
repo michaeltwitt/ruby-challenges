@@ -28,6 +28,13 @@
 * 04_sum_numbers
 * 05_in_array
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+* 06_definition
+>>>>>>> 0c5142cf57ae7e09850c719182717c4efdd33e24
+>>>>>>> 07_included_once
 =======
 * 06_definition
 * 07_included_once
