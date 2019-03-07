@@ -18,15 +18,20 @@
      `git push origin master`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## List of challenge branches
 =======
 # List of challenge branches
 >>>>>>> 83c12527614c5883557817f66bddd38944975dbb
+=======
+## List of challenge branches
+>>>>>>> upstream/08_count_letters
 * 01_ruby_intro
 * 02_input_output
 * 03_largest_number
 * 04_sum_numbers
 * 05_in_array
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,3 +44,8 @@
 * 06_definition
 * 07_included_once
 >>>>>>> 83c12527614c5883557817f66bddd38944975dbb
+=======
+* 06_definition
+* 07_included_once
+* 08_count_letters
+>>>>>>> upstream/08_count_letters
