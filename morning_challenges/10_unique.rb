@@ -18,6 +18,6 @@
 # ruby tests/10_unique_test.rb
 
 def unique(mylist)
-  uniques = mylist
-  mylist & uniques
+  uniques = mylist #assigns the parameter to uniques
+  mylist & uniques #the & operator can remove duplicates just like .unique
 end
