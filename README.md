@@ -32,6 +32,18 @@
 * 12_count_words
 * 13_fibonacci
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 * 14_hackerman
 >>>>>>> adb499cafc46a70114f2fb2e4262f3897a4ccaf9
+=======
+* 14_hackerman
+* 15_change_letters
+* 16_palindrome
+* 17_combine_hashes
+* 18_find_errors
+* 19_balanced_number
+* 20_descending_numbers
+* 21_sort_numbers
+* 22_exes_ohs
+>>>>>>> 85cbb7c5afd0b20a011ceed2d9e803213fd2f716
