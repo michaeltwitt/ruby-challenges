@@ -1,4 +1,4 @@
-input = "Sam Harris"
+# input = "Sam Harris"
 input = input.split(" ")
 first_name = input.slice(0).chars
 last_name = input.slice(1).chars
@@ -20,4 +20,4 @@ end
 end
 
 initial = first_name + last_name
-p initial.join(".").upcase
+return initial.join(".").upcase
