@@ -32,7 +32,6 @@
 * 12_count_words
 * 13_fibonacci
 * 14_hackerman
-* 14_hackerman
 * 15_change_letters
 * 16_palindrome
 * 17_combine_hashes
@@ -44,6 +43,5 @@
 * 23_first_non_repeating
 * 24_isogram
 * 25_remove_adjacent_duplicates
-* 23_first_non_repeating
-* 24_isogram
-* 25_remove_adjacent_duplicates
+* 26_max_min
+* 27_in_array_strict
