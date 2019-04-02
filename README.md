@@ -31,15 +31,7 @@
 * 11_fizzbuzz
 * 12_count_words
 * 13_fibonacci
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 * 14_hackerman
->>>>>>> adb499cafc46a70114f2fb2e4262f3897a4ccaf9
-=======
-=======
->>>>>>> 956e44bc9d9466bda375724a73da6f56ae18eb35
 * 14_hackerman
 * 15_change_letters
 * 16_palindrome
@@ -49,10 +41,9 @@
 * 20_descending_numbers
 * 21_sort_numbers
 * 22_exes_ohs
-<<<<<<< HEAD
->>>>>>> 85cbb7c5afd0b20a011ceed2d9e803213fd2f716
-=======
 * 23_first_non_repeating
 * 24_isogram
 * 25_remove_adjacent_duplicates
->>>>>>> 956e44bc9d9466bda375724a73da6f56ae18eb35
+* 23_first_non_repeating
+* 24_isogram
+* 25_remove_adjacent_duplicates
