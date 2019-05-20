@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0138)https://a9870-21575.cluster41.canvas-user-content.com/courses/9870~162/files/9870~21575/course%20files/unit_cookies/language_selector.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Language Selector</title>
+    <style>
+    body {
+      text-align: center;
+      padding: 100px;
+    }
+    a {
+      cursor: pointer;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a.selected {
+      font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+
+    <p>Select your language:</p>
+      <a id="english">English</a> | <a id="french">French</a> | <a id="doggo">Doggo</a>
+    
+
+    <script>
+    // Our event listener callback
+    const selectLanguage = (event) => {
+
+      // If there's already a bold link, unbold it (remove the 'selected' class)
+      const currentlySelected = document.querySelector('a.selected');
+      if (currentlySelected) {
+        currentlySelected.classList = '';
+      }
+
+      // Add the 'selected' class to the link so it turns bold!
+      event.target.classList = 'selected';
+      // Set the cookie
+      document.cookie = `language=${event.target.id}`
+    }
+    // Reading the cookie
+    function getCookie(cname) {
+      let cookies = {}
+      // Split the cookie return string into its separate cookie values
+      let c_array = document.cookie.split("; ")
+      // Take each cookie item in the array and split it into a key, value pair to be added to the "cookies" hash
+      c_array.forEach(item => {
+        let [key, value] = item.split("=")
+        cookies[key] = value
+      })
+      return cookies[cname]
+    }
+
+    let language = getCookie("language")
+    if (language) {
+      document.querySelector(`#${language}`).classList.add("selected")
+    }
+
+    // Find every language and add an 'on click' event listener
+    const languages = document.querySelectorAll('a');
+    languages.forEach(language => {
+      // When a language is clicked, run the selectLanguage function
+      language.addEventListener('click', selectLanguage);
+    });
+    </script>
+  
+
+</body></html>
