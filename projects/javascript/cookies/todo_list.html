@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0136)https://a9870-21337.cluster41.canvas-user-content.com/courses/9870~162/files/9870~21337/course%20files/unit_web_storage/jquery_todo.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./todo_list_files/bulma.min.css">
+  </head>
+  <body class="has-text-centered">
+    <progress class="progress is-primary" value="0" max="100">0</progress>
+    <nav class="level">
+      <div class="level-item">
+        <div>
+          <div class="heading">To Do</div>
+          <h1 class="title is-1">0</h1>
+        </div>
+      </div>
+    </nav>
+
+    <form>
+      <input type="text" class="input is-large is-primary has-text-centered" placeholder="add a todo!" value="">
+    </form>
+
+    <br>
+
+    <div id="tasks"></div>
+
+    <script src="./todo_list_files/jquery-3.3.1.min.js.download"></script>
+    <script>
+    //
+    // Dollar $ign means jQuery :)
+    //
+
+    // Wait for the page to be ready before running our JS
+    $(document).ready(() => {
+
+      // Listen for form submission
+      $('form').submit((event) => {
+        // Prevent the browser from handling the form
+        event.preventDefault();
+
+        // Run the addTask function, pass it the current text in the input
+        addTask($('form input').val());
+
+        // Set the input value back to empty after we add a task
+        $('form input').val('');
+      });
+
+      // On task click
+      $('#tasks').on('click', '.notification', function () {
+        // Mark task as complete
+        // Note we're not using arrow function syntax for our callback because we want to preserve 'this'.
+        // In this context, 'this' refers to the notification that has been clicked.
+        $(this).toggleClass('is-primary');
+
+        // Update progress bar
+        updateProgress();
+      });
+
+      addTask = (task) => {
+        // Create a task and add it to #tasks
+        $('#tasks').prepend($(`<div class="notification">${task}</div>`));
+
+        // Update our h1 with the total number of tasks
+        $('h1').text($('#tasks div').length);
+      }
+
+      // Update progress bar
+      updateProgress = () => {
+        const totalTasks = $('#tasks div').length;
+        const completedTasks = $('#tasks div.notification.is-primary').length;
+        $('progress').val((completedTasks/totalTasks) * 100);
+      }
+    });
+
+    </script>
+
+  
+
+</body></html>
