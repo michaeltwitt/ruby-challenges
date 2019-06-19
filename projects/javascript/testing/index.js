@@ -23,10 +23,13 @@ function divide(a, b) {
 }
 
 function factorOf(a, b) {
-    factor = false
+    let factor = false
     if (typeof a != "number" || typeof b != "number")
     throw "Numbers Only"
-    
+    if (b % a === 0) {
+        factor = true
+    }
+    return factor
 }
 
-module.exports = { add }
+module.exports = { add, subtract, multiply, divide, factorOf }
